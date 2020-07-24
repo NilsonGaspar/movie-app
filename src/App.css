@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+  color: white;  
+  margin-bottom: 60px;
+
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0 auto;
+  background-color: #182945;
+  text-align: center;
+  font-size: 21px;
+  overflow: hidden;
+  padding: 10px 0;
+  
+}
+
+.logo a {
+  text-decoration: none;
+  color: #f6d448;
+
+}
+
+
+h3 {
+  max-width: 1420px;
+  text-align: left;
+  padding-left: 23px;
+  margin: 0 auto 0 auto;
+  padding-top: 30px;
+}
+
+
+/* Movie poster content */
+.movie-container.big, .movie-container.small, .movie-container.medium {
+  display: flex;
+  max-width: 1440px;
+  overflow-x: auto;
+  margin: auto; 
+}
+ 
+.movie-container.small img {
+  width: 140px;
+  max-height: 250px;
+  min-height: 210px;
+  border-radius: 7px;
+  margin: 20px 0 20px 20px;
+  background-color: #dddddd;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.movie-container.big img {
+  width: 230px;
+  height: 350px;
+  margin: 20px 0 -20px 0;
+  background-color: #292638;
+  object-fit: cover;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform .5s ease;
+}
+
+.movie-container.medium img {
+  width: 180px;
+  height: 350px;
+  margin: 20px 0 -20px 0;
+  background-color: #292638;
+  object-fit: cover;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform .5s ease;
+}
+
+.movie-container.medium img:hover, .movie-container.big img:hover {
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+}
+
+.movie-container.small img:hover {
+  border-style: solid;
+  border-color: #ffffff;
+  width: 134px;
+  max-height: 244px;
+  min-height: 204px;
+}
+
+.btn-play {
+  min-width: 40px;
+  min-height: 40px;
+  border: 0;
+  background-image: url("./img/playicon.png");
+  background-color:transparent;
+  background-size: cover; 
+  transform: translateY(-195px) translateX(0);
+  pointer-events: none;
+
+}
+
+.movie-container.big .btn-play {
+  transform: translateY(-190px) translateX(0);
+
+}
+
+.movie-container.small .btn-play {
+  display: none;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+/* center all the content inside the class Content (In this case Youtube Video Trailer) */
+.trailer-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+/* Overlay for when youtube video is opened */
+.overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, .5);
+  pointer-events: none;
+}
+/* used to active and disactivate overlay */
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  
+ 
+}
